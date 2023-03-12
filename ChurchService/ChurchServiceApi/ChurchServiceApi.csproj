@@ -15,4 +15,8 @@
     <ProjectReference Include="..\ChurchService.Library\ChurchService.Library.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\ServiceDependencies\" />
+  </ItemGroup>
+
 </Project>
