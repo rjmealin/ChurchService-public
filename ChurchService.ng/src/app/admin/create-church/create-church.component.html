@@ -1,0 +1,54 @@
+<div class="login">
+    <h2>Create Church</h2>
+
+    
+    <mat-form-field appearance="outline">
+        <mat-label>Church Name</mat-label>
+        <input matInput [(ngModel)]="model.Name">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="model.Email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input matInput [(ngModel)]="model.PhoneNumber">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput [(ngModel)]="model.Address">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <input matInput [(ngModel)]="model.City">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>State</mat-label>
+        <input matInput [(ngModel)]="model.State">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Zip</mat-label>
+        <input matInput [(ngModel)]="model.Zip">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="model.Password">
+    </mat-form-field>
+
+    <div class="options">
+    
+        <button mat-raised-button color="primary" (click)="AddChurch()">Create church</button>
+
+    </div>
+
+</div>
+
+

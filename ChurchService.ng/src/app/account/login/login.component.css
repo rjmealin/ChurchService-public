@@ -1,0 +1,24 @@
+.login{
+    border:solid black 1px;
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    width: 600px; 
+    /* align-items: center; */
+    justify-content: center;
+    padding:30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #bbbbbb;
+    background-color: white;
+
+}
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+h2 {
+    text-align: center;
+}

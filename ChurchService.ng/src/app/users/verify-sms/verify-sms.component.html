@@ -1,0 +1,15 @@
+
+<div class="container">
+    <h2>Enter Your 6 Digit Code</h2>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Verification Code</mat-label>
+        <input matInput type="number" [(ngModel)]="code"/>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button mat-raised-button (click)="AttemptVerify()" color="accent">Verify</button>
+        <button mat-stroked-button (click)="Close()" color="warn" >Cancel</button>
+    </div>
+
+</div>

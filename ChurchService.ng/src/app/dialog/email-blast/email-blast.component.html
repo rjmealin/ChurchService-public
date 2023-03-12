@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="body">
+        <h2 style="margin-top: 30px;">Send Email Blast</h2>
+        <mat-form-field appearance="outline">
+            <mat-label>Subject</mat-label>
+            <input matInput [(ngModel)]="model.Subject"/>
+        </mat-form-field>
+    
+            
+        <mat-form-field appearance="fill">
+            <mat-label>Date of Event (Optional)</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="model.EventDate">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Message</mat-label>
+            <textarea matInput [rows]="10" placeholder="Email Body" [(ngModel)]="model.CustomMessage"></textarea>
+        </mat-form-field>
+    </div>
+    
+    <div class="buttons">
+        <button mat-stroked-button (click)="Ok()" class="t-confirm-yes" color="accent">Send Emails</button>
+        <button mat-stroked-button (click)="Cancel()" class="t-confirm-no" color="warn" >Cancel</button>
+    </div>
+</div>
+
+

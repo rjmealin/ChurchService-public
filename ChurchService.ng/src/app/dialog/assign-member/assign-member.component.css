@@ -1,0 +1,44 @@
+mat-dialog-content {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+mat-dialog-content > mat-form-field {
+    width:40%;
+    margin:15px;
+}
+h2 {width: 100%; text-align: center;}
+
+mat-dialog-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.details {
+    width:80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.details > p,div,h3 {
+    width:100%;
+}
+.buttons {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.comments  {
+    border:solid #888 1px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #eee;
+    margin-bottom: 15px;
+}
+.comments > p {
+    padding:30px;
+}

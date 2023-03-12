@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="contact">
+        <h4>Contact Info</h4>
+        <span>Visitor Name: {{data.VisitorFirstName}} {{data.VisitorLastName}}</span>
+        <span>Visitor Email: {{data.VisitorEmail?? 'N/A'}} </span>
+        <span>Visitor Phone: {{data.VisitorPhone?? '' | phone}}</span>
+        <span>Visitor Address: {{data.VisitorAddress}} {{data.VisitorCity}}, {{data.VisitorState}} {{data.VisitorZip}}</span>
+    </div>
+    <div class="details">
+        <h4>Details</h4>
+        <span>Date of Attendance: {{data.DateOfAttendance | date}}</span>
+        <span>Referral Type: {{data.ReferalType === 1 ? 'Email' : 
+            data.ReferalType === 2 ? 'Flyer' : 
+            data.ReferalType === 3 ? 'Website' : 
+            data.ReferalType === 4 ? 'Invite from Member' : 
+            data.ReferalType === 5 ? 'News Paper': 
+            data.ReferalType === 6 ? 'Social Media':'N/A'}}</span>
+        <span>Home Church: {{data.HomeChurch ?? 'N/A'}}</span>
+        <span>Visitor Age: {{data.VisitorAge ?? 'N/A'}}</span>
+        <p>Reason For Attendance: {{data.ReasonForAttendance?? 'N/A'}}</p>
+    </div>
+    <div class="status">
+        <h4>Status</h4>
+        <span>Returning Visitor? {{data.IsReturningVisitor ? 'Yes':'No'}}</span>
+        <span>Existing Christian? {{data.IsExistingChristian ? 'Yes': 'No'}}</span>
+        <span>New to Area? {{data.IsNewToArea ? 'Yes':'No'}}</span>
+        <span>First time Guest? {{data.IsFirstTimeGuest? 'Yes':'No'}}</span>
+    </div>
+    <div class="comments">
+        <h4>Comments</h4>
+        <p>{{data.Comments}}</p>    
+    </div>
+</div>
+

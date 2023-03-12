@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="planned-visits" (click)="RouteToComponent('member/planned-visits')" [ngClass]="{'alert' : unassignedVisitCount > 0}">
+        <div>
+            <h2>Planned Visits</h2>
+            <span *ngIf="unassignedVisitCount > 0">There are {{unassignedVisitCount}} unassigned Visits!</span>
+        </div>
+
+
+    </div>
+    <div class="visitor-cards" (click)="RouteToComponent('member/visitor-cards')">
+        <div>
+            <h2>Visitor Cards</h2>
+        </div>
+        
+    </div>
+    <div class="members" (click)="RouteToComponent('admin/members-edit')" *ngIf="isAdmin | async">
+        <div>
+            <h2>Members</h2>
+        </div>
+        
+    </div>
+    <div class="availability" (click)="RouteToComponent('member/member-availability')">
+        <div>
+            <h2>Availability</h2>
+        </div>
+    </div>
+</div>
+
+

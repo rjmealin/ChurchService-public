@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="members">
+        <div *ngFor="let member of members" class="member">
+            <div class="details">
+                <span>{{member.FullName}}</span>
+                <span>Email: {{member.Email}}</span>
+                <span>Phone: {{member.Phone}}</span>
+            </div>
+            <div class="buttons">
+                <!-- <button mat-raised-button color="accent">Upgrade to Admin</button> -->
+                <button mat-raised-button color="warn" (click)="RemoveMember(member.UserId, member.FullName)">Remove</button>
+            </div>
+
+        </div>
+    </div>
+    <button mat-raised-button color="accent" (click)="AddMember()">Add Member</button>
+</div>

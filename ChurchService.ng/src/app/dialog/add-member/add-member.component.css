@@ -1,0 +1,19 @@
+ form {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ form > mat-form-field {
+    width:40%;
+    margin:15px;
+}
+h2 {width: 100%; text-align: center;}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}

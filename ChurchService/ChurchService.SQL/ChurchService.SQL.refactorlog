@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="23b18ba6-e702-40b4-8cbd-5d663c551baf" ChangeDateTime="01/20/2023 02:54:22">
+    <Property Name="ElementName" Value="[dbo].[Churches].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Churches]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ChurchId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="99b819fd-9dd7-4b9d-88a1-d699c6714d03" ChangeDateTime="01/20/2023 02:56:37">
+    <Property Name="ElementName" Value="[dbo].[Churches].[ChurchName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Churches]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c25d104d-474e-4174-a0a2-71defaa1bb6f" ChangeDateTime="01/20/2023 03:02:23">
+    <Property Name="ElementName" Value="[dbo].[VisitorCards].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[VisitorCards]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VisitorCardId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="86cbafa9-1387-4969-a83e-3d3ddd349327" ChangeDateTime="01/20/2023 18:10:25">
+    <Property Name="ElementName" Value="[dbo].[PlannedVisits].[VisitorLastNamw]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PlannedVisits]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VisitorLastName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fc01c0b0-b079-43ea-9f87-dcffe68452f3" ChangeDateTime="02/04/2023 22:30:41">
+    <Property Name="ElementName" Value="[dbo].[UnavailableDates].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UnavailableDates]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UnavailableDateId" />
+  </Operation>
+</Operations>

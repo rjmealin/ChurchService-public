@@ -1,0 +1,9 @@
+<div class="content">
+    <h2>Recover Password</h2>
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput name="email" required [(ngModel)]="email"/>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" (click)="RequestReset()">Recover password</button>
+</div>

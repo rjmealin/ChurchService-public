@@ -1,0 +1,81 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "ChurchServiceContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "SQL",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "ChurchService.Library",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Churches]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ErrorLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PlannedVisits]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UnavailableDates]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserEmailVerifications]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserPasswordResets]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Users]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserSmsVerifications]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VisitorCards]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GetAvailableMembers]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[test]",
+         "ObjectType": 1
+      }
+   ],
+   "UiHint": "DESKTOP-K7857M2\\SQLEXPRESS01.ChurchService",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

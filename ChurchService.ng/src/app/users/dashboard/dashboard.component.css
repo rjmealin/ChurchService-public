@@ -1,0 +1,92 @@
+.planned-visits{
+    background-image: url('../../../content/churchfront.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;
+}
+.planned-visits > div {
+    background-color: rgba(255, 255, 255, 0.9); border-radius: 15px; height:100%; display: flex; align-items: center; justify-content: center; flex-direction: column;
+}
+.planned-visits > div> h2 {
+    width:100%; font-style: italic; font-size: 30px; width: 100%; text-align: center; padding-top:15px; font-family: Arial, Helvetica, sans-serif;
+}
+.planned-visits > div> span {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.visitor-cards{
+    background-image: url('../../../content/visitorCart.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;
+}
+.visitor-cards > div {
+    background-color: rgba(255, 255, 255, 0.9); border-radius: 15px; height:100%; display: flex; align-items: center; justify-content: center; flex-direction: column;
+}
+.visitor-cards > div > h2 {
+    width:100%;
+    font-style: italic;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding-top:15px;
+}
+.visitor-cards > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.members {
+    background-image: url('../../../content/members.png'); background-position: center; background-repeat: no-repeat; background-size: cover;
+}
+.members > div {
+    background-color: rgba(255, 255, 255, 0.9); border-radius: 15px; height:100%;  display: flex; align-items: center; justify-content: center; flex-direction: column;
+}
+.members > div > h2 {
+    width:100%;
+    font-style: italic;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding-top:15px;
+}
+
+.availability{
+    background-image: url('../../../content/Calendar-.jpg'); background-position: center; background-repeat: no-repeat;
+}
+
+.availability > div {
+    background-color: rgba(255, 255, 255, 0.8); border-radius: 15px; height:100%; display: flex; align-items: center; justify-content: center; flex-direction: column;
+}
+
+.availability > div > h2 {
+    width:100%;
+    font-style: italic;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding-top:15px;
+}
+.alert {
+    border:solid red 1px !important;
+    box-shadow: 1px 1px 20px rgb(172, 81, 81) !important;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > div {
+    height: 300px;
+    width:500px;
+    border: solid black 1px;
+    margin:30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px #bbb;
+    transition-duration: 0.5s;
+    transition-property: box-shadow;
+}
+
+.container > div:hover {
+    box-shadow: 1px 1px 15px black;
+    cursor: pointer;
+}

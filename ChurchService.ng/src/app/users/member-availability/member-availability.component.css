@@ -1,0 +1,49 @@
+.picker {
+    height: 400px;
+    width:40%;
+    border: solid black 1px;
+    margin:30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.table {
+    min-height: 400px;
+    width:40%;
+    border: solid black 1px;
+    margin:30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+}
+.table > table {
+    width:80%;
+    border:solid #ddd 1px
+}
+table > tr:nth-child(even){
+    background-color: #ddd;
+    border-color: #ddd;
+  }
+th {text-align: center;}
+td{text-align: center;}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+h2 {
+    width:100%;
+    text-align: center;
+    margin-top: 15px;
+}

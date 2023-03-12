@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="picker">
+        <h2>Add Unavailable date</h2>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Date of Unavailibility</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="date">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <button mat-stroked-button color="primary" (click)="AddUnavaibleDate()">Add Date</button>
+
+
+    </div>
+    <div class="table">
+        <h2>Dates marked as Unavailable</h2>
+
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Remove</th>
+            </tr>
+            <tr *ngFor="let date of unaviableDates">
+                <td>{{date | date:'fullDate'}}</td>
+                <td><button mat-icon-button color="warn" (click)="RemoveDate(date)"><mat-icon>delete</mat-icon></button></td>
+            </tr>
+        </table>
+    </div>
+</div>

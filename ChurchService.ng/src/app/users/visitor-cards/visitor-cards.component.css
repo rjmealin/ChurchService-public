@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height:100%;
+    width:90%;
+}
+.container > button {
+    margin:20px;
+}
+.row-style { background-color: #ddd;}
+
+.mat-elevation-z8{    
+  border-radius: 10px;
+  overflow:hidden !important;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+  }
+
+.search {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  margin:30px;
+  padding: 15px;
+  box-shadow: 1px 1px 10px #888;
+  border-radius: 10px;
+}
+.search > mat-form-field {
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+
+.normal-table {
+  width:100%;
+  border: solid #ddd 1px;
+  box-shadow: 1px 1px 10px #ddd;
+  background-color: #fff;
+
+  border-radius: 10px;
+  margin: 30px;
+}
+.normal-table > tr {
+  height:50px;
+}
+
+.normal-table > tr:nth-child(even){
+  background-color: #ddd;
+  border-color: #ddd;
+}
+
+.normal-table > tr:Hover{
+  cursor: pointer;
+}
+
+td {text-align: center;
+  border-color: #ddd;}
+
+  table{
+    border-spacing: 0px !important;
+    overflow: hidden;
+  }
+
+  .controls{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .controls > button { margin-right:25px;}
+  .checks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:320px;
+  }
+  .checks > mat-checkbox{
+    width:49.5%;
+  }
+  .search-btns{
+    width:100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }

@@ -1,0 +1,29 @@
+<div class="login">
+    <h2>Login</h2>
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput name="email" required [(ngModel)]="model.Email" (keyup.enter)="UserLogin()"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" name="password" required [(ngModel)]="model.Password" (keyup.enter)="UserLogin()"/>
+    </mat-form-field>
+    <mat-error *ngIf="failedLogin">
+        <span>Incorrect Email or Password</span>
+    </mat-error>
+
+
+    <div class="options">
+    
+        <button mat-raised-button color="accent" (click)="UserLogin()">Login</button>
+
+        
+
+        <!-- <a [routerLink]="['/account/signup']" class="lowerLinks">Signup</a> -->
+        <button mat-raised-button color="accent" routerLink="/account-recovery">Recover password</button>
+
+        <!-- <mat-checkbox [(ngModel)]="rememberMe">Remember Me</mat-checkbox> -->
+    </div>
+
+</div>

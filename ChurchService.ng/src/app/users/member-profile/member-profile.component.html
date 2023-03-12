@@ -1,0 +1,44 @@
+<div class="container">
+    <h2>Member Profile</h2>
+    <div class="inputs">
+        <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput [(ngModel)]="profile.FirstName"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput [(ngModel)]="profile.LastName"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input matInput [(ngModel)]="profile.Phone"/>
+        </mat-form-field>
+
+        <div class="phone">
+            <mat-checkbox [(ngModel)]="profile.EnableTextNotifications">Enable Text Notifications</mat-checkbox>
+            <ng-container *ngIf="profile.PhoneVerified">
+                <span>Your phone number has been verified!</span>
+            </ng-container>
+            <ng-container *ngIf="!profile.PhoneVerified">
+                <span>Verify your phone number to start recieving texts</span>
+                <button mat-raised-button (click)="SendSmsCode()" color="accent">Verify Phone</button>
+            </ng-container>
+            
+        </div>
+        
+    </div>
+    <div class="profileImage">
+        <input type="file" accept="image/*" #imageUploader (change)="onImageSelected($event)" multiple style="display: none;" />
+        <div *ngIf="profile.ProfileImageDataUrl != null">
+            <h3>Profile Image</h3>
+            <img [src]="profile.ProfileImageDataUrl" loading="lazy"/>
+        </div>
+        <div class="profile-image-upload">
+            <button mat-raised-button (click)="imageUploader.click()" color="accent" style="margin-top: 30px;">Upload an Image</button>
+        </div>
+    </div>
+    <button mat-raised-button (click)="UpdateMemberProfile()" color="accent" style="margin-top: 30px;">Save Changes</button>
+    
+</div>

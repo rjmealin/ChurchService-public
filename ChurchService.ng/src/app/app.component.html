@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="header">
+        <div class="logo">
+            <img [src]="logoUrl" *ngIf="loggedIn | async">
+        </div>
+        <div class="menu"   *ngIf="loggedIn | async">
+            <button mat-stroked-button color="primary" routerLink="/member/profile">Member profile</button>
+            <button mat-stroked-button color="primary" routerLink="/admin/church-profile" *ngIf="isAdmin | async">Church profile</button>
+            <button mat-stroked-button color="primary" routerLink="/member/dashboard">Dashboard</button>
+            <button mat-stroked-button color="primary" (click)="Logout()">Logout</button>
+        </div>
+
+        <div class="spacer"></div>
+    </div>
+    <div [@routeAnimations]="getRouteAnimationData()" class="app" >
+        <router-outlet></router-outlet>
+    </div>
+    
+</div>
+
+

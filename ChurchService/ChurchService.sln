@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChurchServiceApi", "ChurchServiceApi\ChurchServiceApi.csproj", "{D60689C2-2AC3-4115-B1FC-F92D182FB83E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChurchService.Library", "ChurchService.Library\ChurchService.Library.csproj", "{B053EC85-8346-4FE6-A4FA-0B2A2780B2D2}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ChurchService.SQL", "ChurchService.SQL\ChurchService.SQL.sqlproj", "{A3410D15-5C47-4CFD-A32E-B5CA685C90D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D60689C2-2AC3-4115-B1FC-F92D182FB83E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D60689C2-2AC3-4115-B1FC-F92D182FB83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D60689C2-2AC3-4115-B1FC-F92D182FB83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D60689C2-2AC3-4115-B1FC-F92D182FB83E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B053EC85-8346-4FE6-A4FA-0B2A2780B2D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B053EC85-8346-4FE6-A4FA-0B2A2780B2D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B053EC85-8346-4FE6-A4FA-0B2A2780B2D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B053EC85-8346-4FE6-A4FA-0B2A2780B2D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3410D15-5C47-4CFD-A32E-B5CA685C90D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3410D15-5C47-4CFD-A32E-B5CA685C90D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3410D15-5C47-4CFD-A32E-B5CA685C90D4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A3410D15-5C47-4CFD-A32E-B5CA685C90D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3410D15-5C47-4CFD-A32E-B5CA685C90D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3410D15-5C47-4CFD-A32E-B5CA685C90D4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {229823DB-3BD6-4766-A828-DF2B98F80FEB}
+	EndGlobalSection
+EndGlobal

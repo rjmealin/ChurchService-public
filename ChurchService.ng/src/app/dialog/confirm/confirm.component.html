@@ -1,0 +1,12 @@
+
+
+<mat-dialog-content>
+    <h3>{{title}}</h3>
+    <span>{{message}}</span>    
+</mat-dialog-content>
+  <mat-dialog-actions>
+
+    <button mat-stroked-button (click)="confirm()" class="t-confirm-yes" color="warn" >Remove</button>
+    <button mat-stroked-button (click)="cancel()" class="t-confirm-no" color="accent" >Cancel</button>
+  
+  </mat-dialog-actions>

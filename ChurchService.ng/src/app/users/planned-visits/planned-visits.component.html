@@ -1,0 +1,37 @@
+
+<div class="container">
+    
+  <div class="header">
+    <button mat-raised-button color="accent" (click)="PrevMonth()">Previous Month</button>
+    <h2>{{viewDate | date:'LLLL YYYY'}}</h2>
+    <button mat-raised-button color="accent" (click)="NextMonth()">Next Month</button>
+
+  </div>
+
+    <div [ngSwitch]="view">
+      <mwl-calendar-month-view
+        *ngSwitchCase="'month'"
+        [viewDate]="viewDate"
+        [events]="events"
+        [activeDayIsOpen]="activeDayIsOpen"
+        (eventClicked)="eventClicked($event)"
+      >
+      </mwl-calendar-month-view>
+      <mwl-calendar-week-view
+        *ngSwitchCase="'week'"
+        [viewDate]="viewDate"
+        [events]="events"
+        (eventClicked)="eventClicked($event)"
+      >
+      </mwl-calendar-week-view>
+      <mwl-calendar-day-view
+        *ngSwitchCase="'day'"
+        [viewDate]="viewDate"
+        [events]="events"
+        (eventClicked)="eventClicked($event)"
+      >
+      </mwl-calendar-day-view>
+    </div>
+
+
+  </div>

@@ -1,0 +1,92 @@
+<div class="container">
+
+  <div class="search">
+    <mat-form-field appearance="outline">
+        <mat-label>Referral Type</mat-label>
+        <mat-select [(ngModel)]="referralType" placeholder="All Types" [ngModelOptions]="{standalone:true}">
+            <mat-option [value]="null">Any Type</mat-option>
+            <mat-option [value]="1">Email</mat-option>
+            <mat-option [value]="2">Flyer</mat-option>
+            <mat-option [value]="3">Website</mat-option>
+            <mat-option [value]="4">Invite From Member</mat-option>
+            <mat-option [value]="5">News Paper</mat-option>
+            <mat-option [value]="6">Social Media</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Start date" [(ngModel)]="start">
+        <input matEndDate placeholder="End date" [(ngModel)]="end">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Enter search term" [(ngModel)]="searchString" [ngModelOptions]="{standalone:true}"/>
+        <mat-hint>Comments, Reason for att.</mat-hint>
+    </mat-form-field>
+
+    <div class="checks">
+      <mat-checkbox [(ngModel)]="ExistingChristian">Existing Christian</mat-checkbox>
+      <mat-checkbox [(ngModel)]="Returning">Returning Visitor</mat-checkbox>
+      <mat-checkbox [(ngModel)]="NewToArea">New to area</mat-checkbox>
+      <mat-checkbox [(ngModel)]="FirstTime">First time guest</mat-checkbox>
+    </div>
+    <div class="search-btns">
+      <button mat-raised-button color="accent" (click)="FilterCards()">Search</button>
+      <button mat-raised-button color="accent" (click)="ResetFilters()">Reset</button>
+    </div>
+
+</div>
+<div class="controls">
+    <button mat-raised-button color="accent" (click)="AddVisitorCard()">Add visitor card</button>
+    <button mat-raised-button color="accent" (click)="SendVisitorsEmails()">Send Emails</button>
+</div>
+
+  <table class="normal-table">
+    <tr>
+      <th></th>
+      <th>Visitor Name</th>
+      <th>Address</th>
+      <th>Referral Type</th>
+      <th>Status</th>
+      <th>Date of Attendance</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let card of filteredCards" [id]="card.VisitorCardId">
+      <td>
+        <button mat-icon-button (click)="ViewCardDetails(card)"><mat-icon>visibility</mat-icon></button>
+      </td>
+      <td>{{card.VisitorFirstName}} {{card.VisitorLastName}}</td>
+      <td>{{card.VisitorAddress}} {{card.VisitorCity}}, {{card.VisitorState}}</td>
+      <td>{{card.ReferalType === 1 ? 'Email' : 
+        card.ReferalType === 2 ? 'Flyer' : 
+        card.ReferalType === 3 ? 'Website' : 
+        card.ReferalType === 4 ? 'Invite from Member' : 
+        card.ReferalType === 5 ? 'News Paper': 
+        card.ReferalType === 6 ? 'Social Media':'N/A'}}
+      </td>
+      <td>
+        {{card.IsExistingChristian ? 'Existing Christian ':''}}{{card.IsNewToArea ? ' New to area ':''}}{{card.IsReturningVisitor ? ' Returning Visitor ':''}}{{card.IsFirstTimeGuest ? ' First time guest ': ''}}
+      </td>
+      <td>{{card.DateOfAttendance | date}} </td>
+      <td>
+        <ng-container *ngIf="isAdmin | async">
+          <button mat-icon-button color="warn" (click)="RemoveCard(card.VisitorCardId)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </ng-container>
+
+      </td>
+
+    </tr>
+
+
+  </table>
+</div>
+
+ 

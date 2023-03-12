@@ -1,0 +1,28 @@
+.container {
+    padding:15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.container > div {
+    width:46%;
+    border:solid #ddd 1px;
+    margin:15px;
+    min-height:200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 10px #ddd;
+    border-radius: 5px;
+    padding:15px;
+}
+span {margin:5px;width:100%;}
+
+p {   
+    word-break: break-all;
+    white-space: normal;
+    line-height: 22px;
+    width:100%;
+}

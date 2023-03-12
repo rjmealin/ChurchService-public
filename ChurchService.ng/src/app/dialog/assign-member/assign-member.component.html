@@ -1,0 +1,32 @@
+
+
+<mat-dialog-content>
+    <h2>Planned Visit on {{data.start | date: 'EEEE, MMMM d'}}</h2>
+
+    <div class="details">
+        <p>Visitor Name: {{visit.VisitorFirstName}} {{visit.VisitorLastName}}</p>
+        <p>Visitor Email: {{visit.VisitorEmail}}</p>
+        <p>Visitor Phone: {{visit.VisitorPhone}}</p>
+        <h2>Comments or Questions</h2>
+        <div class="comments">
+            <p>{{visit.CommentsOrQuestions}}</p>
+        </div>
+    </div>
+    
+    <ng-container *ngIf="visit.AssignedUserId == null && (isAdmin | async)">
+        <mat-form-field appearance="outline">
+            <mat-label>Available Members</mat-label>
+            <mat-select placeholder="Member name" [(ngModel)]="selectedMemberId">
+                <mat-option *ngFor="let member of availableMembers" [value]="member.DatabaseId">{{member.Description}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="buttons">
+            <button mat-raised-button (click)="Assign()" color="accent" >Assign</button>
+            <button mat-stroked-button (click)="Cancel()" color="warn" >Cancel</button>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="visit.AssignedUserId !== null">
+        <span>Assigned Member: {{visit.AssignedMemberFirstName}} {{visit.AssignedMemberLastName}}</span>
+    </ng-container>
+
+</mat-dialog-content>
